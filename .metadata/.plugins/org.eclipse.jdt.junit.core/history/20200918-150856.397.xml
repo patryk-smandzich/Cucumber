@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="18" started="18" failures="0" errors="2" ignored="0">
+  <testsuite name="runners.TestRunner" time="87.47">
+    <testsuite name="SOFLAB TA Framework training" time="87.469">
+      <testsuite name="Create an acount and buy something using test file" time="87.469" incomplete="true">
+        <error>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"p strong"}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SFL001341', ip: '192.168.0.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a7f10c73c9cdae7877ccb69fe59fe937
+*** Element info: {Using=css selector, value=p strong}&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)&#13;
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)&#13;
+	at pageObject.ShoppingCartSummaryPage.getOrderConfirmation(ShoppingCartSummaryPage.java:145)&#13;
+	at stepDefinitions.ShoppingCartSummarySteps.order_confirmation_is_displayed(ShoppingCartSummarySteps.java:68)&#13;
+	at ✽.order confirmation is displayed(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:92)&#13;
+&#13;
+</error>
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="5.733"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="2.233"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.558"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.092"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="7.96"/>
+        <testcase name="enter the t-shirt category" classname="Create an acount and buy something using test file" time="2.733"/>
+        <testcase name="add to cart a &quot;Adam&quot; t-shirt" classname="Create an acount and buy something using test file" time="11.933"/>
+        <testcase name="enter the casual dresses category" classname="Create an acount and buy something using test file" time="2.651"/>
+        <testcase name="add to cart a &quot;Adam&quot; casual dres" classname="Create an acount and buy something using test file" time="13.554"/>
+        <testcase name="enter the women category" classname="Create an acount and buy something using test file" time="3.388"/>
+        <testcase name="add to cart a &quot;Adam&quot; blouse" classname="Create an acount and buy something using test file" time="12.202"/>
+        <testcase name="proceed to checkout" classname="Create an acount and buy something using test file" time="2.303"/>
+        <testcase name="save the product names and prices to a file" classname="Create an acount and buy something using test file" time="0.403"/>
+        <testcase name="proceed from cart summary to checkout" classname="Create an acount and buy something using test file" time="1.74"/>
+        <testcase name="proceed from address to checkout" classname="Create an acount and buy something using test file" time="1.959"/>
+        <testcase name="proceed from shipping to checkout" classname="Create an acount and buy something using test file" time="3.196"/>
+        <testcase name="pay via check" classname="Create an acount and buy something using test file" time="4.754"/>
+        <testcase name="order confirmation is displayed" classname="Create an acount and buy something using test file" time="10.076">
+          <error>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"p strong"}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SFL001341', ip: '192.168.0.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a7f10c73c9cdae7877ccb69fe59fe937
+*** Element info: {Using=css selector, value=p strong}&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)&#13;
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)&#13;
+	at pageObject.ShoppingCartSummaryPage.getOrderConfirmation(ShoppingCartSummaryPage.java:145)&#13;
+	at stepDefinitions.ShoppingCartSummarySteps.order_confirmation_is_displayed(ShoppingCartSummarySteps.java:68)&#13;
+	at ✽.order confirmation is displayed(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:92)&#13;
+&#13;
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

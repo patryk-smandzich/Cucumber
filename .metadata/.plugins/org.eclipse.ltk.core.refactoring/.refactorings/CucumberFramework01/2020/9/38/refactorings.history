@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;JsonDataReader.java&apos; to &apos;TA_Training/src/main/java/dataProviders&apos;&#x0D;&#x0A;- Original project: &apos;CucumberFramework01&apos;&#x0D;&#x0A;- Destination element: &apos;TA_Training/src/main/java/dataProviders&apos;&#x0D;&#x0A;- Original element: &apos;dataProviders.JsonDataReader.java&apos;" description="Copy compilation unit" destination="=TA_Training/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dataProviders" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;dataProviders{JsonDataReader.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1600349076478" units="1" version="1.0"/>
+</session>

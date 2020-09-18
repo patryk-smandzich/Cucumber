@@ -133,5 +133,21 @@ public class HomeSteps {
 	public void log_the_number_of_download_images() throws MalformedURLException, InterruptedException, IOException {
 		homePage.getNumberOfDownloadImages();
 	}
+	
+	@When("enter the t-shirt category")
+	public void enter_the_t_shirt_category() {
+	    homePage.click_Tshirts();
+	}
+	
+	@When("enter the casual dresses category")
+	public void enter_the_casual_dresses_category() {
+		homePage.click_CasualDresses();
+	}
+	
+	@When("enter the women category")
+	public void enter_the_blouses_category() {
+	    homePage.click_Women();
+	}
+
 
 }

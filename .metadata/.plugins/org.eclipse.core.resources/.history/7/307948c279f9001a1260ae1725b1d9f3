@@ -1,0 +1,7 @@
+driverPath=\chromedriver.exe
+implicitlywait=10
+url=http://automationpractice.com/index.php
+urlGoogle=https://www.google.com
+enviroment=local
+browser=chrome
+windowMaximize=true

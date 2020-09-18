@@ -51,7 +51,7 @@ public class HomePage {
 	WebElement btn_Youtube;
 	@FindBy(css = ".google-plus [target='_blank']")
 	WebElement btn_GooglePlus;
-	@FindBy(css = "[href='http://automationpractice.com/index.php?id_category=3&controller=category'][title='Women']")
+	@FindBy(css = "[title='Women'][href='http://automationpractice.com/index.php?id_category=3&controller=category']")
 	WebElement btn_Women;
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[1]/img[1]")
 	WebElement pic_Blouse;
@@ -79,6 +79,16 @@ public class HomePage {
 	List<WebElement> allThumbImages;
 	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[2]/span[1]")
 	WebElement btn_BlouseQuickView;
+	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[3]")
+	WebElement btn_Tshirts;
+	@FindBy(xpath = "//body[@id='category']/div[@id='page']/div[@class='header-container']/header[@id='header']/div/div[@class='container']/div[@class='row']/div[@id='block_top_menu']/ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li[2]/a[1]")
+	WebElement btn_dresses;
+	@FindBy(css = "[title='Casual Dresses'][style='']")
+	WebElement btn_CasualDresses;
+	@FindBy(xpath = "//a[@class='sf-with-ul'][contains(text(),'Women')]")
+	WebElement btn_women;
+	@FindBy(css = "[title='Blouses']")
+	WebElement btn_Blouses;
 
 	public void navigateTo_HomePage() {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getApplicationUrl());
@@ -224,6 +234,18 @@ public class HomePage {
 
 	public void getNumberOfDownloadImages() throws MalformedURLException, InterruptedException, IOException {
 		System.out.println(saveBlosueImg().size());
+	}
+	
+	public void click_Tshirts() {
+		btn_Tshirts.click();
+	}
+	
+	public void click_CasualDresses() {
+		btn_dresses.click();
+	}
+	
+	public void click_Blouses() {
+		btn_women.click();
 	}
 
 }

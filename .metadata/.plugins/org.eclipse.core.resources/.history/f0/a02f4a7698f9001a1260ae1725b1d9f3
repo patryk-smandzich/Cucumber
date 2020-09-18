@@ -1,0 +1,91 @@
+package pageObject;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import io.cucumber.java.tr.Fakat;
+import selenium.Wait;
+
+public class ShoppingCartSummaryPage {
+
+	WebDriver driver;
+
+	public ShoppingCartSummaryPage(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+
+	@FindBy(css = ".icon-minus")
+	WebElement btn_Minus;
+	@FindBy(css = ".icon-plus")
+	WebElement btn_Plus;
+	@FindBy(id = "total_product_price_2_7_0")
+	WebElement totalBlousePrice;
+	@FindBy(linkText = "Faded Short Sleeve T-shirts")
+	WebElement product1Name;
+	@FindBy(linkText = "Printed Chiffon Dress")
+	WebElement product2Name;
+	@FindBy(xpath = "//td[@class='cart_description']//a[contains(text(),'Blouse')]")
+	WebElement product3Name;
+	@FindBy(css = "#product_price_1_1_377762")
+	WebElement product1Price;
+	@FindBy(css = "#product_price_7_34_377762")
+	WebElement product2Price;
+	@FindBy(css = "#product_price_2_7_377762")
+	WebElement product3Price;
+
+	public void click_Minus() {
+		btn_Minus.click();
+	}
+
+	public void click_Plus() {
+		btn_Plus.click();
+	}
+
+	public void click_MinusXTimes(int howManyTimes) {
+		for (int i = 0; i < howManyTimes; i++) {
+			click_Minus();
+			Wait.untilJqueryIsDone(driver);
+		}
+	}
+
+	public void click_PlusXTimes(int howManyTimes) {
+		for (int i = 0; i < howManyTimes; i++) {
+			click_Plus();
+			Wait.untilJqueryIsDone(driver);
+		}
+	}
+
+	public String getTotalBlousePrice() {
+		return totalBlousePrice.getText();
+	}
+	
+	public String getProduct1Name() {
+		return product1Name.getText();
+	}
+	
+	public String getProduct2Name() {
+		return product2Name.getText();
+	}
+	
+	public String getProduct3Name() {
+		return product3Name.getText();
+	}
+	
+	public String getProduct1Price() {
+		return product1Price.getText();
+	}
+	
+	public String getProduct2Price() {
+		return product2Price.getText();
+	}
+	
+	public String getProduct3Price() {
+		return product3Price.getText();
+	}
+	
+	
+
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="18" started="18" failures="0" errors="0" ignored="0">
+  <testsuite name="runners.TestRunner" incomplete="true">
+    <testsuite name="SOFLAB TA Framework training" incomplete="true">
+      <testsuite name="Create an acount and buy something using test file" incomplete="true">
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="6.025"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="2.743"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.62"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.101"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="10.897"/>
+        <testcase name="enter the t-shirt category" classname="Create an acount and buy something using test file" time="4.502"/>
+        <testcase name="add to cart a &quot;Adam&quot; t-shirt" classname="Create an acount and buy something using test file" time="14.743"/>
+        <testcase name="enter the casual dresses category" classname="Create an acount and buy something using test file" time="5.109"/>
+        <testcase name="add to cart a &quot;Adam&quot; casual dres" classname="Create an acount and buy something using test file" time="13.578"/>
+        <testcase name="enter the women category" classname="Create an acount and buy something using test file" time="4.011"/>
+        <testcase name="add to cart a &quot;Adam&quot; blouse" classname="Create an acount and buy something using test file" time="15.278"/>
+        <testcase name="proceed to checkout" classname="Create an acount and buy something using test file" time="5.432"/>
+        <testcase name="save the product names and prices to a file" classname="Create an acount and buy something using test file" time="0.389"/>
+        <testcase name="proceed from cart summary to checkout" classname="Create an acount and buy something using test file" time="5.575"/>
+        <testcase name="proceed from address to checkout" classname="Create an acount and buy something using test file" time="5.431"/>
+        <testcase name="proceed from shipping to checkout" classname="Create an acount and buy something using test file" time="7.015"/>
+        <testcase name="pay via check" classname="Create an acount and buy something using test file" time="15.341"/>
+        <testcase name="order confirmation is displayed" classname="Create an acount and buy something using test file" incomplete="true"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

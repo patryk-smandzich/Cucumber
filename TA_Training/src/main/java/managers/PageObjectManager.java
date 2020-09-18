@@ -2,6 +2,7 @@ package managers;
 
 import org.openqa.selenium.WebDriver;
 
+import pageObject.CategoriesPages;
 import pageObject.ContactUsPage;
 import pageObject.CreateAnAccountPage;
 import pageObject.GooglePage;
@@ -20,6 +21,7 @@ public class PageObjectManager {
 	private ContactUsPage contactUsPage;
 	private SignInPage signInPage;
 	private CreateAnAccountPage createAnAccountPage;
+	private CategoriesPages categoriesPages;
 
 	public PageObjectManager(WebDriver driver) {
 		this.driver = driver;
@@ -53,6 +55,10 @@ public class PageObjectManager {
 	public CreateAnAccountPage getCreateAnAccountPage() {
 		return (createAnAccountPage == null) ? createAnAccountPage = new CreateAnAccountPage(driver)
 				: createAnAccountPage;
+	}
+	
+	public CategoriesPages getCategoriesPages() {
+		return (categoriesPages == null) ? categoriesPages = new CategoriesPages(driver) : categoriesPages;
 	}
 
 }

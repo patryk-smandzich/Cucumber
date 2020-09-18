@@ -1,0 +1,27 @@
+package stepDefinitions;
+
+import cucumber.TestContext;
+import io.cucumber.java.en.When;
+import managers.FileReaderManager;
+import pageObject.CategoriesPages;
+import testDataTypes.Informations;
+
+public class CategoriesSteps {
+	
+	TestContext testContext;
+	CategoriesPages categoriesPages;
+
+	public CategoriesSteps(TestContext context) {
+		testContext = context;
+		categoriesPages = testContext.getPageObjectManager().getCategoriesPages();
+	}
+	
+	@When("add to cart a {string} t-shirt")
+	public void add_to_cart_a_t_shirt(String firstName) {
+		Informations informations = FileReaderManager.getInstance().getJsonReader().getInformationsByName(firstName);
+		categoriesPages.addToCartTshirtProduct(informations);
+	}
+	
+	
+
+}

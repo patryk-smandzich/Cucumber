@@ -1,0 +1,29 @@
+package pageObject;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class CategoriesPages {
+	
+	WebDriver driver;
+
+	public CategoriesPages(WebDriver driver) {
+		this.driver = driver;
+		PageFactory.initElements(driver, this);
+	}
+	
+	//t-shirts
+	
+	
+	//casual dresses
+	
+	
+	//blouses
+	
+	public void click_TShirtProduct(String product) {
+		driver.findElement(By.cssSelector("[title='" + product + "'] [title='" + product + "']")).click();
+	}
+	
+
+}

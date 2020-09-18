@@ -1,0 +1,16 @@
+[
+	{
+		"firstName": "Adam",
+		"lastName": "Kowalsky",
+		"phoneNumber": "777666777",
+		"password": "Password",
+		"address": "addres",
+		"City": "NY",
+		"State": "Alaska",
+		"ZIP": "22233",
+		"MobilePhone": "999000999",
+		"Product1": "1",
+		"Product2": "2",
+		"Product3": "3"
+	}
+]

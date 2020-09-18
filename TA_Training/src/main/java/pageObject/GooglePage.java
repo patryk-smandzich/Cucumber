@@ -1,8 +1,6 @@
 package pageObject;
 
 import java.awt.AWTException;
-import java.awt.Robot;
-import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -32,13 +30,6 @@ public class GooglePage {
 	}
 
 	public void acceptCookies() throws InterruptedException, AWTException {
-//		Thread.sleep(2000);
-//		Robot robot = new Robot();
-//		for (int i = 0; i < 10; i++) {
-//			robot.keyPress(KeyEvent.VK_TAB);
-//			Thread.sleep(500);
-//		}
-//		robot.keyPress(KeyEvent.VK_ENTER);
 		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe")));
 		driver.findElement(By.cssSelector("#introAgreeButton")).click();
 		driver.switchTo().defaultContent();

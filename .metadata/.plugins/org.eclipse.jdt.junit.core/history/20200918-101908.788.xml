@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="11" started="11" failures="0" errors="2" ignored="0">
+  <testsuite name="runners.TestRunner" time="12.562">
+    <testsuite name="SOFLAB TA Framework training" time="12.562">
+      <testsuite name="Create an acount and buy something using test file" time="12.562" incomplete="true">
+        <error>io.cucumber.junit.UndefinedStepException: The step "add to cart a "Adam" t-shirt" is undefined. You can implement it using the snippet(s) below:
+
+@When("add to cart a {string} t-shirt")
+public void add_to_cart_a_t_shirt(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+
+
+Some other steps were also undefined:
+
+@When("enter the casual dresses category")
+public void enter_the_casual_dresses_category() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("add to cart a {string} casual dres")
+public void add_to_cart_a_casual_dres(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("enter the blouses category")
+public void enter_the_blouses_category() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+@When("add to cart a {string} blouse")
+public void add_to_cart_a_blouse(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="4.577"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="1.354"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.546"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.108"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="3.237"/>
+        <testcase name="enter the t-shirt category" classname="Create an acount and buy something using test file" time="2.729"/>
+        <testcase name="add to cart a &quot;Adam&quot; t-shirt" classname="Create an acount and buy something using test file" time="0.005">
+          <error>io.cucumber.junit.UndefinedStepException: This step is undefined. You can implement it using the snippet(s) below:
+
+@When("add to cart a {string} t-shirt")
+public void add_to_cart_a_t_shirt(String string) {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="enter the casual dresses category" classname="Create an acount and buy something using test file" time="0.004">
+          <skipped>io.cucumber.junit.SkippedThrowable: This step is skipped&#13;
+&#13;
+</skipped>
+        </testcase>
+        <testcase name="add to cart a &quot;Adam&quot; casual dres" classname="Create an acount and buy something using test file" time="0.0">
+          <skipped>io.cucumber.junit.SkippedThrowable: This step is skipped&#13;
+&#13;
+</skipped>
+        </testcase>
+        <testcase name="enter the blouses category" classname="Create an acount and buy something using test file" time="0.0">
+          <skipped>io.cucumber.junit.SkippedThrowable: This step is skipped&#13;
+&#13;
+</skipped>
+        </testcase>
+        <testcase name="add to cart a &quot;Adam&quot; blouse" classname="Create an acount and buy something using test file" time="0.0">
+          <skipped>io.cucumber.junit.SkippedThrowable: This step is skipped&#13;
+&#13;
+</skipped>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

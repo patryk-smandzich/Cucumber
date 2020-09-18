@@ -41,39 +41,59 @@ Feature: SOFLAB TA Framework training
     | 1    | 1     |"$27.00"|
     | 2    | 1     |"$54.00" |
     
-    Scenario: Send a message via Contact us
-    	Given user is on Home Page
-    	When enter Contact us Page
-    	And select "Customer service" from Subject Heading
-    	And enter "test@op.pl" Email address
-    	And enter "test" Order reference
-    	And Attach a file
-    	And enter "test" message
-    	And click Send
-    	Then the confirmation message is displayed
+   Scenario: Send a message via Contact us
+    Given user is on Home Page
+    When enter Contact us Page
+    And select "Customer service" from Subject Heading
+    And enter "test@op.pl" Email address
+    And enter "test" Order reference
+    And Attach a file
+    And enter "test" message
+    And click Send
+    Then the confirmation message is displayed
     
-    Scenario: Bestsellers names and prices
-	    Given user is on Home Page
-	    When open bestsellers section
-	    And log names and prices to console
-	    And log names and prices to file
-	    Then capture a screenshot of displayed products
+   Scenario: Bestsellers names and prices
+	   Given user is on Home Page
+	   When open bestsellers section
+	   And log names and prices to console
+	   And log names and prices to file
+	   Then capture a screenshot of displayed products
     
-    Scenario: Create an account and log in
-	    Given user is on Home Page
-	    When enter Sign in
-	    And enter email to create an account
-	    And click Create an account
-	    And enter informations to create a account
-	    And click register
-	    Then the sign in confirmation message is displayed
-	    When click logout
-	    And sign in with new accout details
-	    Then the sign in confirmation message is displayed
+   Scenario: Create an account and log in
+	   Given user is on Home Page
+	   When enter Sign in
+	   And enter email to create an account
+	   And click Create an account
+	   And enter informations to create a account
+	   And click register
+	   Then the sign in confirmation message is displayed
+	   When click logout
+	   And sign in with new accout details
+	   Then the sign in confirmation message is displayed
     
-    #Scenario: Capture all different ID
-   	# Given user is on Home Page
-   	
+    Scenario Outline: Create an acount and buy something using test file
+   	 Given user is on Home Page
+   	 When enter Sign in
+   	 And enter email to create an account
+     And click Create an account
+     And enter "<informations>" to create a account
+     And enter the t-shirt category
+     And add to cart a "<informations>" t-shirt
+     And enter the casual dresses category
+     And add to cart a "<informations>" casual dres
+     And enter the women category
+     And add to cart a "<informations>" blouse
+     And proceed to checkout
+     And save the product names and prices to a file
+     And proceed from cart summary to checkout
+     And proceed from address to checkout
+     And proceed from shipping to checkout
+     And pay via check
+     Then order confirmation is displayed
+     
+     Examples:
+			|informations|
+			|Adam|
     
     Scenario: Capture all different ID
 	    Given user is on Home Page

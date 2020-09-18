@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="5" started="5" failures="0" errors="2" ignored="0">
+  <testsuite name="runners.TestRunner" time="9.503">
+    <testsuite name="SOFLAB TA Framework training" time="9.503">
+      <testsuite name="Create an acount and buy something using test file" time="9.503" incomplete="true">
+        <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)&#13;
+	at pageObject.CreateAnAccountPage.enter_Password(CreateAnAccountPage.java:90)&#13;
+	at pageObject.CreateAnAccountPage.fillInformationViaJsonFile(CreateAnAccountPage.java:212)&#13;
+	at stepDefinitions.CreateAnAccountSteps.enter_to_create_a_account(CreateAnAccountSteps.java:45)&#13;
+	at ✽.enter "Adam" to create a account(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:79)&#13;
+&#13;
+</error>
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="4.621"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="2.467"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.579"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.109"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="1.726">
+          <error>java.lang.IllegalArgumentException: Keys to send should be a not null CharSequence&#13;
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:97)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#13;
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)&#13;
+	at com.sun.proxy.$Proxy18.sendKeys(Unknown Source)&#13;
+	at pageObject.CreateAnAccountPage.enter_Password(CreateAnAccountPage.java:90)&#13;
+	at pageObject.CreateAnAccountPage.fillInformationViaJsonFile(CreateAnAccountPage.java:212)&#13;
+	at stepDefinitions.CreateAnAccountSteps.enter_to_create_a_account(CreateAnAccountSteps.java:45)&#13;
+	at ✽.enter "Adam" to create a account(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:79)&#13;
+&#13;
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

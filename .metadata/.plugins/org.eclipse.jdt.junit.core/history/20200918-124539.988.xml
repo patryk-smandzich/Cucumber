@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="14" started="14" failures="0" errors="2" ignored="0">
+  <testsuite name="runners.TestRunner" time="76.669">
+    <testsuite name="SOFLAB TA Framework training" time="76.669">
+      <testsuite name="Create an acount and buy something using test file" time="76.669" incomplete="true">
+        <error>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#product_price_1_1_378785"}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SFL001341', ip: '192.168.0.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d06e95acaad32046799ced1abb5344e5
+*** Element info: {Using=css selector, value=#product_price_1_1_378785}&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)&#13;
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)&#13;
+	at pageObject.ShoppingCartSummaryPage.getProduct1Price(ShoppingCartSummaryPage.java:84)&#13;
+	at pageObject.ShoppingCartSummaryPage.getProductPrices(ShoppingCartSummaryPage.java:105)&#13;
+	at pageObject.ShoppingCartSummaryPage.saveProductNamesAndPrices(ShoppingCartSummaryPage.java:114)&#13;
+	at stepDefinitions.ShoppingCartSummarySteps.save_the_product_names_and_prices_to_a_file(ShoppingCartSummarySteps.java:40)&#13;
+	at ✽.save the product names and prices to a file(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:87)&#13;
+&#13;
+</error>
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="5.919"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="1.379"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.52"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.105"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="4.837"/>
+        <testcase name="enter the t-shirt category" classname="Create an acount and buy something using test file" time="2.422"/>
+        <testcase name="add to cart a &quot;Adam&quot; t-shirt" classname="Create an acount and buy something using test file" time="14.377"/>
+        <testcase name="enter the casual dresses category" classname="Create an acount and buy something using test file" time="2.191"/>
+        <testcase name="add to cart a &quot;Adam&quot; casual dres" classname="Create an acount and buy something using test file" time="13.662"/>
+        <testcase name="enter the women category" classname="Create an acount and buy something using test file" time="3.915"/>
+        <testcase name="add to cart a &quot;Adam&quot; blouse" classname="Create an acount and buy something using test file" time="13.935"/>
+        <testcase name="proceed to checkout" classname="Create an acount and buy something using test file" time="3.234"/>
+        <testcase name="save the product names and prices to a file" classname="Create an acount and buy something using test file" time="10.169">
+          <error>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#product_price_1_1_378785"}
+  (Session info: chrome=85.0.4183.102)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'SFL001341', ip: '192.168.0.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:62444}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: d06e95acaad32046799ced1abb5344e5
+*** Element info: {Using=css selector, value=#product_price_1_1_378785}&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)&#13;
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)&#13;
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)&#13;
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)&#13;
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)&#13;
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)&#13;
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)&#13;
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)&#13;
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)&#13;
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)&#13;
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)&#13;
+	at pageObject.ShoppingCartSummaryPage.getProduct1Price(ShoppingCartSummaryPage.java:84)&#13;
+	at pageObject.ShoppingCartSummaryPage.getProductPrices(ShoppingCartSummaryPage.java:105)&#13;
+	at pageObject.ShoppingCartSummaryPage.saveProductNamesAndPrices(ShoppingCartSummaryPage.java:114)&#13;
+	at stepDefinitions.ShoppingCartSummarySteps.save_the_product_names_and_prices_to_a_file(ShoppingCartSummarySteps.java:40)&#13;
+	at ✽.save the product names and prices to a file(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:87)&#13;
+&#13;
+</error>
+        </testcase>
+        <testcase name="proceed from cart summary to checkout" classname="Create an acount and buy something using test file" time="0.003">
+          <skipped>io.cucumber.junit.SkippedThrowable: This step is skipped&#13;
+&#13;
+</skipped>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

@@ -8,7 +8,6 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import cucumber.TestContext;
-import enums.Context;
 
 public class SignInPage {
 

@@ -1,0 +1,16 @@
+[
+	{
+		"firstName": "Adam",
+		"lastName": "Kowalsky",
+		"phoneNumber": "777666777",
+		"password": "Password",
+		"address": "addres",
+		"city": "NY",
+		"state": "Alaska",
+		"zIP": "22233",
+		"mobilePhone": "999000999",
+		"product1": "Faded Short Sleeve T-shirts",
+		"product2": "2",
+		"product3": "3"
+	}
+]

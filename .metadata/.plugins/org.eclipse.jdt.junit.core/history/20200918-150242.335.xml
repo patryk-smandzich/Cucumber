@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestRunner" project="TA_Training" tests="18" started="18" failures="0" errors="2" ignored="0">
+  <testsuite name="runners.TestRunner" time="68.621">
+    <testsuite name="SOFLAB TA Framework training" time="68.621">
+      <testsuite name="Create an acount and buy something using test file" time="68.621" incomplete="true">
+        <error>io.cucumber.junit.UndefinedStepException: The step "order confirmation is displayed" is undefined. You can implement it using the snippet(s) below:
+
+@Then("order confirmation is displayed")
+public void order_confirmation_is_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+        <testcase name="user is on Home Page" classname="Create an acount and buy something using test file" time="4.88"/>
+        <testcase name="enter Sign in" classname="Create an acount and buy something using test file" time="2.179"/>
+        <testcase name="enter email to create an account" classname="Create an acount and buy something using test file" time="0.532"/>
+        <testcase name="click Create an account" classname="Create an acount and buy something using test file" time="0.087"/>
+        <testcase name="enter &quot;Adam&quot; to create a account" classname="Create an acount and buy something using test file" time="5.468"/>
+        <testcase name="enter the t-shirt category" classname="Create an acount and buy something using test file" time="2.347"/>
+        <testcase name="add to cart a &quot;Adam&quot; t-shirt" classname="Create an acount and buy something using test file" time="11.854"/>
+        <testcase name="enter the casual dresses category" classname="Create an acount and buy something using test file" time="2.416"/>
+        <testcase name="add to cart a &quot;Adam&quot; casual dres" classname="Create an acount and buy something using test file" time="11.761"/>
+        <testcase name="enter the women category" classname="Create an acount and buy something using test file" time="1.951"/>
+        <testcase name="add to cart a &quot;Adam&quot; blouse" classname="Create an acount and buy something using test file" time="13.141"/>
+        <testcase name="proceed to checkout" classname="Create an acount and buy something using test file" time="2.985"/>
+        <testcase name="save the product names and prices to a file" classname="Create an acount and buy something using test file" time="0.401"/>
+        <testcase name="proceed from cart summary to checkout" classname="Create an acount and buy something using test file" time="2.22"/>
+        <testcase name="proceed from address to checkout" classname="Create an acount and buy something using test file" time="1.301"/>
+        <testcase name="proceed from shipping to checkout" classname="Create an acount and buy something using test file" time="1.301"/>
+        <testcase name="pay via check" classname="Create an acount and buy something using test file" time="3.79"/>
+        <testcase name="order confirmation is displayed" classname="Create an acount and buy something using test file" time="0.005">
+          <error>io.cucumber.junit.UndefinedStepException: This step is undefined. You can implement it using the snippet(s) below:
+
+@Then("order confirmation is displayed")
+public void order_confirmation_is_displayed() {
+    // Write code here that turns the phrase above into concrete actions
+    throw new io.cucumber.java.PendingException();
+}
+&#13;
+&#13;
+</error>
+        </testcase>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testrun>

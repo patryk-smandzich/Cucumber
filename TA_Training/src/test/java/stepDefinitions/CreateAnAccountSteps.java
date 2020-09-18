@@ -5,7 +5,9 @@ import org.junit.Assert;
 import cucumber.TestContext;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import managers.FileReaderManager;
 import pageObject.CreateAnAccountPage;
+import testDataTypes.Informations;
 
 public class CreateAnAccountSteps {
 	
@@ -35,6 +37,13 @@ public class CreateAnAccountSteps {
 	@When("click logout")
 	public void click_logout() {
 	    createAnAccountPage.click_SignOut();
+	}
+	
+	@When("enter {string} to create a account")
+	public void enter_to_create_a_account(String firstName) {
+		Informations informations = FileReaderManager.getInstance().getJsonReader().getInformationsByName(firstName);
+		createAnAccountPage.fillInformationViaJsonFile(informations);
+		createAnAccountPage.click_Register();
 	}
 
 }
