@@ -6,8 +6,12 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=""/>
+		<item key="selection" value="#product_price_1_1_377762"/>
 		<list key="findhistory">
+			<item value="#product_price_1_1_377762"/>
+			<item value="Proceed To Checkout"/>
+			<item value="act"/>
+			<item value="qui"/>
 			<item value="scr"/>
 			<item value="addToCartBlouse()"/>
 		</list>
@@ -19,6 +23,6 @@
 		<item key="DIALOG_Y_ORIGIN" value="357"/>
 		<item key="DIALOG_WIDTH" value="336"/>
 		<item key="DIALOG_HEIGHT" value="454"/>
-		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-15|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
 	</section>
 </section>

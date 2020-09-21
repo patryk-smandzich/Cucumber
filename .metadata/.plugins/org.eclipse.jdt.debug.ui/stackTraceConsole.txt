@@ -1,12 +1,12 @@
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"[title='Faded Short Sleeve T-shirts'] [title='Faded Short Sleeve T-shirts']"}
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"p strong"}
   (Session info: chrome=85.0.4183.102)
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'SFL001341', ip: '192.168.0.139', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '14.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:50649}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
-Session ID: ed165ce34e51d0d286edc96ff1168071
-*** Element info: {Using=css selector, value=[title='Faded Short Sleeve T-shirts'] [title='Faded Short Sleeve T-shirts']}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 85.0.4183.102, chrome: {chromedriverVersion: 85.0.4183.87 (cd6713ebf92fa..., userDataDir: C:\Users\P_SMAN~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61717}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: a7f10c73c9cdae7877ccb69fe59fe937
+*** Element info: {Using=css selector, value=p strong}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -22,7 +22,10 @@ Session ID: ed165ce34e51d0d286edc96ff1168071
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
 	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at pageObject.CategoriesPages.click_Product1(CategoriesPages.java:43)
-	at stepDefinitions.CategoriesSteps.add_to_cart_a_casual_dres(CategoriesSteps.java:29)
-	at ?.add to cart a "Adam" casual dres(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:83)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy18.getText(Unknown Source)
+	at pageObject.ShoppingCartSummaryPage.getOrderConfirmation(ShoppingCartSummaryPage.java:145)
+	at stepDefinitions.ShoppingCartSummarySteps.order_confirmation_is_displayed(ShoppingCartSummarySteps.java:68)
+	at ?.order confirmation is displayed(file:///C:/Users/p_smandzich/Desktop/Cucumber/TA_Training/src/test/resources/funcionalTests/training.feature:92)
 
