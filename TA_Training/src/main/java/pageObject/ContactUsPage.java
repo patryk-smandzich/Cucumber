@@ -1,5 +1,7 @@
 package pageObject;
 
+import java.io.File;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -44,8 +46,9 @@ public class ContactUsPage {
 	}
 
 	public void enter_AttachFile() {
-		txtbx_AttachFile.sendKeys(
-				"C:\\Users\\p_smandzich\\Desktop\\Cucumber\\TA_Training\\src\\test\\resources\\files\\contactUs.txt");
+		String path = "src/test/resources/files/contactUs.txt";
+		File file = new File(new File(path).getAbsolutePath());
+		txtbx_AttachFile.sendKeys(file.toString());
 	}
 
 	public void enter_Message(String message) {
