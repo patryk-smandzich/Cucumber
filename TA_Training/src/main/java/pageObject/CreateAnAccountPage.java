@@ -90,19 +90,19 @@ public class CreateAnAccountPage {
 		txtbx_Password.sendKeys(Password);
 	}
 
-	public void select_Days() {
+	public void select_Days(int dayIndex) {
 		Select day = new Select(drpdwn_Days);
-		day.selectByIndex(1);
+		day.selectByIndex(dayIndex);
 	}
 
-	public void select_Months() {
+	public void select_Months(int monthIndex) {
 		Select month = new Select(drpdwn_Months);
-		month.selectByIndex(1);
+		month.selectByIndex(monthIndex);
 	}
 
-	public void select_Years() {
+	public void select_Years(int yearIndex) {
 		Select year = new Select(drpdwn_Years);
-		year.selectByIndex(1);
+		year.selectByIndex(yearIndex);
 	}
 
 	public void click_Newsletter() {
@@ -137,18 +137,18 @@ public class CreateAnAccountPage {
 		txtbx_City.sendKeys(City);
 	}
 
-	public void select_State() {
+	public void select_State(int stateIndex) {
 		Select state = new Select(drpdwn_State);
-		state.selectByIndex(1);
+		state.selectByIndex(stateIndex);
 	}
 
 	public void enter_Zip(String zip) {
 		txtbx_Zip.sendKeys(zip);
 	}
 
-	public void select_Country() {
+	public void select_Country(String countryValue) {
 		Select country = new Select(drpdwn_Country);
-		country.selectByValue("21");
+		country.selectByValue(countryValue);
 	}
 
 	public void enter_AdditionalInformation(String info) {
@@ -171,15 +171,15 @@ public class CreateAnAccountPage {
 		btn_Register.click();
 	}
 
-	public void fillAllInformation() {
+	public void fillAllInformation(int dayIndex, int monthIndex, int yearIndex, int stateIndex, String countryValue) {
 		select_Mr();
 		enter_FirstName("FirstName");
 		enter_LastName("LastName");
 		click_Email();
 		enter_Password("Password");
-		select_Days();
-		select_Months();
-		select_Years();
+		select_Days(dayIndex);
+		select_Months(monthIndex);
+		select_Years(yearIndex);
 		click_Newsletter();
 		click_SpecialOffert();
 		click_FirstNameAddres();
@@ -188,9 +188,9 @@ public class CreateAnAccountPage {
 		enter_AddresLine1("Line1");
 		enter_AddresLine2("Line2");
 		enter_City("City");
-		select_State();
+		select_State(stateIndex);
 		enter_Zip("88877");
-		select_Country();
+		select_Country(countryValue);
 		enter_AdditionalInformation("info");
 		enter_HomePhone("888777888");
 		enter_MobilePhone("666555444");
@@ -204,24 +204,25 @@ public class CreateAnAccountPage {
 	public void click_SignOut() {
 		btn_SignOut.click();
 	}
-	
-	public void fillInformationViaJsonFile(Informations informations) {
+
+	public void fillInformationViaJsonFile(Informations informations, int dayIndex, int monthIndex, int yearIndex,
+			int stateIndex, String countryValue) {
 		enter_FirstName(informations.firstName);
 		enter_LastName(informations.lastName);
 		click_Email();
 		enter_Password(informations.password);
-		select_Days();
-		select_Months();
-		select_Years();
+		select_Days(dayIndex);
+		select_Months(monthIndex);
+		select_Years(yearIndex);
 		click_Newsletter();
 		click_SpecialOffert();
 		click_FirstNameAddres();
 		click_LastNameAddres();
 		enter_AddresLine1(informations.address);
 		enter_City(informations.city);
-		select_State();
+		select_State(stateIndex);
 		enter_Zip(informations.zIP);
-		select_Country();
+		select_Country(countryValue);
 		enter_MobilePhone(informations.mobilePhone);
 		click_Alias();
 	}

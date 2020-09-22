@@ -2,6 +2,7 @@ package pageObject;
 
 import java.util.Random;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -30,17 +31,9 @@ public class SignInPage {
 	@FindBy(css = "[name='SubmitLogin']")
 	WebElement btn_SignIn;
 
-	public String getSaltString() {
-		String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
-		StringBuilder salt = new StringBuilder();
-		Random rnd = new Random();
-		while (salt.length() < 10) { // length of the random string.
-			int index = (int) (rnd.nextFloat() * SALTCHARS.length());
-			salt.append(SALTCHARS.charAt(index));
-		}
-		String saltStr = salt.toString();
-		return saltStr + "@gmail.com";
-
+	public String getRandomEmial() {
+		String randomUserName = RandomStringUtils.randomAlphanumeric(20);
+		return new StringBuilder(randomUserName).append("@gmail.com").toString();
 	}
 
 	public void enter_RandomEmailAddresCreateAccount(String mail) {

@@ -51,12 +51,14 @@ public class HomePage {
 	WebElement btn_Youtube;
 	@FindBy(css = ".google-plus [target='_blank']")
 	WebElement btn_GooglePlus;
-	@FindBy(css = "[title='Women'][href='http://automationpractice.com/index.php?id_category=3&controller=category']")
-	WebElement btn_Women;
-	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[1]/img[1]")
-	WebElement pic_Blouse;
-	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[2]/div[2]/a[1]/span[1]")
-	WebElement adToCart_Blouse;
+	@FindAll(@FindBy(css = "h5 a"))
+	List<WebElement> products_Names;
+	@FindAll(@FindBy(css = "div[class='button-container'] a:first-child"))
+	List<WebElement> products_BtnsToCart;
+	@FindAll(@FindBy(css = ".left-block .product-image-container"))
+	List<WebElement> products_pcts;
+	@FindAll(@FindBy(css = ".quick-view"))
+	List<WebElement> products_quickViev;
 	@FindBy(id = "layer_cart_product_price")
 	WebElement cartProductPrice;
 	@FindBy(xpath = "//span[@class='ajax_block_cart_total']")
@@ -77,11 +79,9 @@ public class HomePage {
 	List<WebElement> allSiteIDs;
 	@FindAll(@FindBy(css = ".fancybox [itemprop='image']"))
 	List<WebElement> allThumbImages;
-	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/ul[1]/li[2]/div[1]/div[1]/div[1]/a[2]/span[1]")
-	WebElement btn_BlouseQuickView;
-	@FindBy(xpath = "/html[1]/body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[6]/ul[1]/li[3]")
+	@FindBy(css = "#block_top_menu > ul > li:nth-child(3) > a")
 	WebElement btn_Tshirts;
-	@FindBy(xpath = "//body[@id='category']/div[@id='page']/div[@class='header-container']/header[@id='header']/div/div[@class='container']/div[@class='row']/div[@id='block_top_menu']/ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li[2]/a[1]")
+	@FindBy(css = "#block_top_menu > ul > li:nth-child(2) > a")
 	WebElement btn_dresses;
 	@FindBy(css = "[title='Casual Dresses'][style='']")
 	WebElement btn_CasualDresses;
@@ -116,12 +116,39 @@ public class HomePage {
 	}
 
 	public void click_Women() {
-		btn_Women.click();
+		btn_women.click();
 	}
 
-	public void addToCartBlouse() {
-		Actions action = new Actions(driver);
-		action.moveToElement(pic_Blouse).moveToElement(adToCart_Blouse).click().build().perform();
+	public List<WebElement> getBtns_ToCart() {
+		List<WebElement> btns = new ArrayList<>();
+		for (WebElement btn : products_BtnsToCart) {
+			btns.add(btn);
+		}
+		return btns;
+	}
+
+	public List<String> getNamesToCart() {
+		List<String> names = new ArrayList<>();
+		for (WebElement name : products_Names) {
+			names.add(name.getText());
+		}
+		return names;
+	}
+
+	public List<WebElement> getPcts_ToCart() {
+		List<WebElement> pcts = new ArrayList<>();
+		for (WebElement pct : products_pcts) {
+			pcts.add(pct);
+		}
+		return pcts;
+	}
+
+	public List<WebElement> getProducts_quickViev() {
+		List<WebElement> vievs = new ArrayList<>();
+		for (WebElement viev : products_quickViev) {
+			vievs.add(viev);
+		}
+		return vievs;
 	}
 
 	public String getCartProductPrice() {
@@ -149,7 +176,7 @@ public class HomePage {
 		Wait.untilJqueryIsDone(driver);
 	}
 
-	public List<String> getBestsellersProductNames() throws InterruptedException {
+	public List<String> getBestsellersProductNames() {
 		List<String> productNames = new ArrayList<>();
 		for (WebElement name : prd_BestsellersListName) {
 			productNames.add(name.getText());
@@ -157,7 +184,7 @@ public class HomePage {
 		return productNames;
 	}
 
-	public List<String> getBestsellersProductPrices() throws InterruptedException {
+	public List<String> getBestsellersProductPrices() {
 		List<String> productPrices = new ArrayList<>();
 		for (WebElement price : prd_BestsellersListPrice) {
 			if (price.getText().equals("")) {
@@ -207,11 +234,18 @@ public class HomePage {
 		}
 	}
 
-	public void click_BlouseQuickView() {
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView();", pic_Blouse);
+	public void addItemToCart(String name) throws InterruptedException {
+		int index = getNamesToCart().indexOf(name);
 		Actions action = new Actions(driver);
-		action.moveToElement(pic_Blouse).moveToElement(btn_BlouseQuickView).click().build().perform();
+		action.moveToElement(getPcts_ToCart().get(index)).build().perform();
+		getBtns_ToCart().get(index).click();
+	}
+
+	public void click_ProductQuickView(String name) {
+		int index = getNamesToCart().indexOf(name);
+		Actions action = new Actions(driver);
+		action.moveToElement(getPcts_ToCart().get(index)).moveToElement(getProducts_quickViev().get(index)).click()
+				.build().perform();
 		Wait.until(driver, ExpectedConditions
 				.invisibilityOfElementLocated(By.xpath("//div[@class='fancybox-overlay fancybox-overlay-fixed']")));
 		Wait.untilJqueryIsDone(driver);
@@ -235,17 +269,14 @@ public class HomePage {
 	public void getNumberOfDownloadImages() throws MalformedURLException, InterruptedException, IOException {
 		System.out.println(saveBlosueImg().size());
 	}
-	
+
 	public void click_Tshirts() {
 		btn_Tshirts.click();
 	}
-	
+
 	public void click_CasualDresses() {
 		btn_dresses.click();
 	}
-	
-	public void click_Blouses() {
-		btn_women.click();
-	}
+
 
 }

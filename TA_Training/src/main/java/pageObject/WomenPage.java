@@ -14,9 +14,9 @@ public class WomenPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(css = "h5 [href='http://automationpractice.com/index.php?id_category=4&controller=category']")
+	@FindBy(xpath = "//h5//a[contains(text(),'Tops')]")
 	WebElement btn_Tops;
-	@FindBy(css = "h5 [href='http://automationpractice.com/index.php?id_category=8&controller=category']")
+	@FindBy(xpath = "//h5//a[contains(text(),'Dresses')]")
 	WebElement btn_Dresses;
 
 	public boolean isDisplayed_Tops() {

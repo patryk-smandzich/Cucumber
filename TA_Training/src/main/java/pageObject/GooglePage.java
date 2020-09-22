@@ -1,7 +1,5 @@
 package pageObject;
 
-import java.awt.AWTException;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -29,7 +27,7 @@ public class GooglePage {
 		driver.get(FileReaderManager.getInstance().getConfigReader().getGoogleUrl());
 	}
 
-	public void acceptCookies() throws InterruptedException, AWTException {
+	public void acceptCookies() {
 		driver.switchTo().frame(driver.findElement(By.cssSelector("iframe")));
 		driver.findElement(By.cssSelector("#introAgreeButton")).click();
 		driver.switchTo().defaultContent();

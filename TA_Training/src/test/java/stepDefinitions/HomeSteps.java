@@ -58,9 +58,9 @@ public class HomeSteps {
 		homePage.click_Women();
 	}
 
-	@When("add to cart Blouse item")
-	public void add_to_cart_blouse_item() {
-		homePage.addToCartBlouse();
+	@When("add to cart {string} item")
+	public void add_to_cart_item(String string) throws InterruptedException {
+		homePage.addItemToCart("Blouse");
 	}
 
 	@Then("the item price prive should be {string}")
@@ -119,9 +119,9 @@ public class HomeSteps {
 		homePage.saveToFileIDs();
 	}
 
-	@When("enter the Blouse Quick viev")
-	public void enter_the_blouse_quick_viev() {
-		homePage.click_BlouseQuickView();
+	@When("enter the {string} Quick viev")
+	public void enter_the_blouse_quick_viev(String name) {
+		homePage.click_ProductQuickView(name);
 	}
 
 	@When("download thumbs images")
@@ -133,21 +133,20 @@ public class HomeSteps {
 	public void log_the_number_of_download_images() throws MalformedURLException, InterruptedException, IOException {
 		homePage.getNumberOfDownloadImages();
 	}
-	
+
 	@When("enter the t-shirt category")
 	public void enter_the_t_shirt_category() {
-	    homePage.click_Tshirts();
+		homePage.click_Tshirts();
 	}
-	
+
 	@When("enter the casual dresses category")
 	public void enter_the_casual_dresses_category() {
 		homePage.click_CasualDresses();
 	}
-	
+
 	@When("enter the women category")
 	public void enter_the_blouses_category() {
-	    homePage.click_Women();
+		homePage.click_Women();
 	}
-
 
 }

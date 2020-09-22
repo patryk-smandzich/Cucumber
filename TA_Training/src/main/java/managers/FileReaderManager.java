@@ -19,9 +19,9 @@ public class FileReaderManager {
 	public ConfigFileReader getConfigReader() {
 		return (configFileReader == null) ? new ConfigFileReader() : configFileReader;
 	}
-	
-	public JsonDataReader getJsonReader(){
-		 return (jsonDataReader == null) ? new JsonDataReader() : jsonDataReader;
-		 }
+
+	public JsonDataReader getJsonReader() {
+		return (jsonDataReader == null) ? new JsonDataReader() : jsonDataReader;
+	}
 
 }

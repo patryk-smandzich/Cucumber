@@ -1,6 +1,6 @@
 package selenium;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 import java.util.function.Function;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -42,10 +42,10 @@ public class Wait {
 		until(driver, waitCondition, FileReaderManager.getInstance().getConfigReader().getImplicitlyWait());
 	}
 
-	@SuppressWarnings("deprecation")
+	
 	private static void until(WebDriver driver, Function<WebDriver, Boolean> waitCondition, Long timeoutInSeconds) {
 		WebDriverWait webDriverWait = new WebDriverWait(driver, timeoutInSeconds);
-		webDriverWait.withTimeout(timeoutInSeconds, TimeUnit.SECONDS);
+		webDriverWait.withTimeout(Duration.ofSeconds(timeoutInSeconds));
 		try {
 			webDriverWait.until(waitCondition);
 		} catch (Exception e) {

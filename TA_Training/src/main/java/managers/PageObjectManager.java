@@ -56,7 +56,7 @@ public class PageObjectManager {
 		return (createAnAccountPage == null) ? createAnAccountPage = new CreateAnAccountPage(driver)
 				: createAnAccountPage;
 	}
-	
+
 	public CategoriesPages getCategoriesPages() {
 		return (categoriesPages == null) ? categoriesPages = new CategoriesPages(driver) : categoriesPages;
 	}

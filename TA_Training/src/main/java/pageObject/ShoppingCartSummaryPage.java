@@ -27,8 +27,8 @@ public class ShoppingCartSummaryPage {
 	WebElement btn_Minus;
 	@FindBy(css = ".icon-plus")
 	WebElement btn_Plus;
-	@FindBy(id = "total_product_price_2_7_0")
-	WebElement totalBlousePrice;
+	@FindBy(css = ".first_item .cart_total .price")
+	WebElement totalFirstProductPrice;
 	@FindBy(linkText = "Faded Short Sleeve T-shirts")
 	WebElement product1Name;
 	@FindBy(linkText = "Printed Chiffon Dress")
@@ -75,7 +75,7 @@ public class ShoppingCartSummaryPage {
 	}
 
 	public String getTotalBlousePrice() {
-		return totalBlousePrice.getText();
+		return totalFirstProductPrice.getText();
 	}
 
 	public String getProduct1Name() {
@@ -89,7 +89,6 @@ public class ShoppingCartSummaryPage {
 	public String getProduct3Name() {
 		return product3Name.getText();
 	}
-
 
 	public List<String> getProductNames() {
 		List<String> productNames = new ArrayList<>();
@@ -115,31 +114,31 @@ public class ShoppingCartSummaryPage {
 			out.close();
 		}
 	}
-	
+
 	public void click_ProceedToCheckout() {
 		btn_ProceedToCheckout.click();
 	}
-	
+
 	public void click_ProceedToCheckoutAddress() {
 		btn_ProceedToCheckoutAddress.click();
 	}
-	
+
 	public void click_Terms() {
 		chkbx_Terms.click();
 	}
-	
+
 	public void click_ProceedToCheckoutShipping() {
 		btn_ProceedToCheckoutShipping.click();
 	}
-	
+
 	public void click_PayViaCheck() {
 		btn_PayViaCheck.click();
 	}
-	
+
 	public void click_ConfirmOrder() {
 		btn_CorfirmOrder.click();
 	}
-	
+
 	public String getOrderConfirmation() {
 		return orderConfirmation.getText();
 	}
