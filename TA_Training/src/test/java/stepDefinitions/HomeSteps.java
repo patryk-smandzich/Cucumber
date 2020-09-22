@@ -61,6 +61,7 @@ public class HomeSteps {
 	@When("add to cart {string} item")
 	public void add_to_cart_item(String string) throws InterruptedException {
 		homePage.addItemToCart("Blouse");
+//		homePage.addRandomItemToCart();
 	}
 
 	@Then("the item price prive should be {string}")

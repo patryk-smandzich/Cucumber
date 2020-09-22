@@ -11,6 +11,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import javax.imageio.ImageIO;
@@ -124,6 +125,7 @@ public class HomePage {
 		for (WebElement btn : products_BtnsToCart) {
 			btns.add(btn);
 		}
+		btns.subList(btns.size()/2, btns.size());
 		return btns;
 	}
 
@@ -132,6 +134,7 @@ public class HomePage {
 		for (WebElement name : products_Names) {
 			names.add(name.getText());
 		}
+		names.subList(names.size()/2, names.size());
 		return names;
 	}
 
@@ -140,6 +143,7 @@ public class HomePage {
 		for (WebElement pct : products_pcts) {
 			pcts.add(pct);
 		}
+		pcts.subList(pcts.size()/2, pcts.size());
 		return pcts;
 	}
 
@@ -148,6 +152,7 @@ public class HomePage {
 		for (WebElement viev : products_quickViev) {
 			vievs.add(viev);
 		}
+		vievs.subList(vievs.size()/2, vievs.size());
 		return vievs;
 	}
 
@@ -236,6 +241,17 @@ public class HomePage {
 
 	public void addItemToCart(String name) throws InterruptedException {
 		int index = getNamesToCart().indexOf(name);
+		System.out.println(getNamesToCart());
+		System.out.println(index);
+		Actions action = new Actions(driver);
+		action.moveToElement(getPcts_ToCart().get(index)).build().perform();
+		getBtns_ToCart().get(index).click();
+	}
+	
+	public void addRandomItemToCart() throws InterruptedException {
+		Random rand = new Random();
+		int index = rand.nextInt(getBtns_ToCart().size()/2);
+		System.out.println(index);
 		Actions action = new Actions(driver);
 		action.moveToElement(getPcts_ToCart().get(index)).build().perform();
 		getBtns_ToCart().get(index).click();
